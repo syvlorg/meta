@@ -22,7 +22,7 @@
 ;;; Commentary:
 
 ;; Recursively convert a keymap to a deino!
-;; The difference between this and hercules / cosmoem is the latter use which-key.
+;; The difference between this and hercules / cosmoem is the latter uses which-key.
 
 ;;; Code:
 
@@ -40,26 +40,29 @@
                 key
                 parent
                 func
-                #'(lambda
-                    (str)
-                    (interactive)
-                    (meta--construct-name (concat name "/" str)))))
+                #'(lambda (str) (meta--construct-name (concat name "/" str)))))
 
             (next-key (string-join (cdr (d--g ds :keys)) " "))
             (next-deino-body (if (d--g ds :two-key) func (meq/inconcat (d--g ds :next-name) "/body")))
-            (deino-funk (meq/inconcat "defdeino" (if (d--g ds :current-body-plus) "+" "")))
-            (deino-list (if (d--g ds :current-body-plus) (list nil) '((:color blue) nil ("`" nil "cancel")))))
-        (when first-call (eval `(defdeino+
-                                    ,(intern (meta--construct-name name))
-                                    nil
-                                    (,(d--g ds :carkeys)
-                                        ,(d--g ds :current-body)
-                                        ,(symbol-name (d--g ds :current-body))))))
+            (deino-funk (meq/inconcat "defdeino" (if (d--g ds :current-body-plus) "+" ""))))
+        (when first-call
+            (unless (fboundp (meq/inconcat (meta--construct-name name) "/body"))
+                (eval `(defdeino ,(intern (meta--construct-name name)) (:color blue) nil ("`" nil "cancel"))))
+            (eval `(defdeino+
+                    ,(intern (meta--construct-name name))
+                    nil
+                    (,(d--g ds :carkeys)
+                        ,(d--g ds :current-body)
+                        ,(symbol-name (d--g ds :current-body))))))
         (unless (d--g ds :one-key)
             (eval `(meta* ,(d--g ds :current-parent) nil ,name ,next-key ,func*))
             `(,(meq/inconcat "defdeino" (if (d--g ds :current-body-plus) "+" ""))
                 ,(intern (d--g ds :current-name))
-                ,@(if (d--g ds :current-body-plus) (list nil) '((:color blue) nil ("`" nil "cancel")))
+                ,@(if (d--g ds :current-body-plus)
+                    (list nil)
+                    `((:color blue) nil
+                        ("`" nil "cancel")
+                        ("DEL" ,(if first-call nil (meq/inconcat (meta--construct-name (d--g ds :current-parent)) "/body")) "back")))
                 (,(d--g ds :spare-keys)
                     ,next-deino-body
                     ,(symbol-name next-deino-body))))))
@@ -68,43 +71,40 @@
 (defmacro meta (keymap)
     (let* ((name* (symbol-name keymap))
             (name (meta--construct-name name*)))
-        (eval `(defdeino ,(intern name) (:color blue) nil ("`" nil "cancel")))
-        (mapc #'(lambda (kons) (interactive)
+        (mapc #'(lambda (kons)
                     (eval `(meta*
                         nil
                         t
                         ,name*
                         ,(car kons)
                         ,(cdr kons))))
-            (eval `(which-key--get-keymap-bindings ,keymap nil nil t))) nil))
+            (eval `(which-key--get-keymap-bindings ,keymap nil nil nil t))) nil))
 
 ;;;###autoload
 (defmacro meta-evil (keymap)
-    (let* ((name* (symbol-name keymap))
+    (with-eval-after-load 'evil (let* ((name* (symbol-name keymap))
             (name (meta--construct-name name*)))
-        (eval `(defdeino ,(intern name) (:color blue) nil ("`" nil "cancel")))
-        (mapc #'(lambda (kons) (interactive)
+        (mapc #'(lambda (kons)
                     (eval `(meta*
                         nil
                         t
                         ,name*
                         ,(car kons)
                         ,(cdr kons))))
-            (eval `(which-key--get-keymap-bindings ,keymap nil nil t t))) nil))
+            (eval `(which-key--get-keymap-bindings ,keymap nil nil nil t t))) nil)))
 
 ;;;###autoload
 (defmacro meta-aiern (keymap)
-    (let* ((name* (symbol-name keymap))
+    (with-eval-after-load 'aiern (let* ((name* (symbol-name keymap))
             (name (meta--construct-name name*)))
-        (eval `(defdeino ,(intern name) (:color blue) nil ("`" nil "cancel")))
-        (mapc #'(lambda (kons) (interactive)
+        (mapc #'(lambda (kons)
                     (eval `(meta*
                         nil
                         t
                         ,name*
                         ,(car kons)
                         ,(cdr kons))))
-            (eval `(which-key--get-keymap-bindings ,keymap nil nil t nil t))) nil))
+            (eval `(which-key--get-keymap-bindings ,keymap nil nil nil t nil t))) nil)))
 
 ;;;###autoload
 (defmacro meta-rename (keymap key &rest args)
@@ -112,9 +112,7 @@
         `(defdeino+
             ,(intern (meta--construct-name name))
             nil
-            (,key
-                ,(meq/inconcat (meta--construct-name (concat name "/" key)) "/body")
-                ,@args))))
+            (,key ,(meq/inconcat (meta--construct-name (concat name "/" key)) "/body") ,@args))))
 
 ;;;###autoload
 (defmacro meta-rename+ (keymap key &rest args)

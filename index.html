@@ -3,18 +3,18 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-11-14 Mon 06:03 -->
+<!-- 2023-09-04 Mon 12:28 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>&lrm;</title>
-<meta name="generator" content="Org mode" />
 <meta name="author" content="Jeet Ray" />
-<link rel="stylesheet" type="text/css" href="https://combinatronics.io/sylvorg/settings/main/src/styles/primary/syvl.css" />
-<link rel="icon" href="https://combinatronics.io/sylvorg/settings/main/src/icons/favicons/shiny-zigzagoon-galar.ico" sizes="any" />
-<link rel="icon" href="https://combinatronics.io/sylvorg/settings/main/src/icons/favicons/shiny-zigzagoon-galar.svg" />
-<link rel="manifest" href="https://combinatronics.io/sylvorg/settings/main/manifest.json" />
-<link rel="stylesheet" type="text/css" href="https://combinatronics.io/sylvorg/settings/main/src/styles/highlight/paraiso-dark.min.css" />
-<script src="https://combinatronics.io/sylvorg/settings/main/src/scripts/highlight/highlight.min.js"></script>
+<meta name="generator" content="Org Mode" />
+<link rel="stylesheet" type="text/css" href="https://combinatronics.io/sylvorg/bundle/main/src/styles/primary/syvl.css" />
+<link rel="icon" href="https://combinatronics.io/sylvorg/bundle/main/src/icons/favicons/shiny-zigzagoon-galar.ico" sizes="any" />
+<link rel="icon" href="https://combinatronics.io/sylvorg/bundle/main/src/icons/favicons/shiny-zigzagoon-galar.svg" />
+<link rel="manifest" href="https://combinatronics.io/sylvorg/bundle/main/manifest.json" />
+<link rel="stylesheet" type="text/css" href="https://combinatronics.io/sylvorg/bundle/main/src/styles/highlight/paraiso-dark.min.css" />
+<script src="https://combinatronics.io/sylvorg/bundle/main/src/scripts/highlight/highlight.min.js"></script>
 <script>hljs.highlightAll();</script>
 <div class="header">
 <h1>We Are Syvlorg.</h1>
@@ -24,233 +24,209 @@
 <a href="https://resume.syvl.org">Résumé</a>
 <a href="https://index.syvl.org">Index</a>
 </div>
-<script type="text/javascript">
-// @license magnet:?xt=urn:btih:e95b018ef3580986a04669f1b5879592219e2a7a&dn=public-domain.txt Public Domain
-<!--/*--><![CDATA[/*><!--*/
-     function CodeHighlightOn(elem, id)
-     {
-       var target = document.getElementById(id);
-       if(null != target) {
-         elem.classList.add("code-highlighted");
-         target.classList.add("code-highlighted");
-       }
-     }
-     function CodeHighlightOff(elem, id)
-     {
-       var target = document.getElementById(id);
-       if(null != target) {
-         elem.classList.remove("code-highlighted");
-         target.classList.remove("code-highlighted");
-       }
-     }
-    /*]]>*///-->
-// @license-end
-</script>
 </head>
 <body>
-<div id="content">
-<div id="table-of-contents">
+<div id="content" class="content">
+<div id="table-of-contents" role="doc-toc">
 <h2>Table of Contents</h2>
-<div id="text-table-of-contents">
+<div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org5839e9d">meta</a></li>
+<li><a href="#org462f79f">meta</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org5839e9d" class="outline-2">
-<h2 id="org5839e9d">meta</h2>
-<div class="outline-text-2" id="text-org5839e9d">
+<div id="outline-container-org462f79f" class="outline-2">
+<h2 id="org462f79f">meta</h2>
+<div class="outline-text-2" id="text-org462f79f">
 <div class="org-src-container">
-<pre><code class="language-lisp match-braces rainbow-braces">;;; meta.el --- a simple package                     -*- lexical-binding: t; -*-
+<pre><code class="language-lisp match-braces rainbow-braces"><span style="font-weight: bold; font-style: italic;">;;; </span><span style="font-weight: bold; font-style: italic;">meta.el --- a simple package                     -*- lexical-binding: t; -*-</span>
 
-;; Copyright (C) 2021  Jeet Ray
+<span style="font-weight: bold; font-style: italic;">;; </span><span style="font-weight: bold; font-style: italic;">Copyright (C) 2021  Jeet Ray</span>
 
-;; Author: Jeet Ray &lt;aiern@protonmail.com&gt;
-;; Keywords: lisp
-;; Version: 0.0.1
+<span style="font-weight: bold; font-style: italic;">;; </span><span style="font-weight: bold; font-style: italic;">Author: Jeet Ray <a href="mailto:aiern%40protonmail.com">&lt;aiern@protonmail.com&gt;</a></span>
+<span style="font-weight: bold; font-style: italic;">;; </span><span style="font-weight: bold; font-style: italic;">Keywords: lisp</span>
+<span style="font-weight: bold; font-style: italic;">;; </span><span style="font-weight: bold; font-style: italic;">Version: 0.0.1</span>
 
-;; This program is free software; you can redistribute it and/or modify
-;; it under the terms of the GNU General Public License as published by
-;; the Free Software Foundation, either version 3 of the License, or
-;; (at your option) any later version.
+<span style="font-weight: bold; font-style: italic;">;; </span><span style="font-weight: bold; font-style: italic;">This program is free software; you can redistribute it and/or modify</span>
+<span style="font-weight: bold; font-style: italic;">;; </span><span style="font-weight: bold; font-style: italic;">it under the terms of the GNU General Public License as published by</span>
+<span style="font-weight: bold; font-style: italic;">;; </span><span style="font-weight: bold; font-style: italic;">the Free Software Foundation, either version 3 of the License, or</span>
+<span style="font-weight: bold; font-style: italic;">;; </span><span style="font-weight: bold; font-style: italic;">(at your option) any later version.</span>
 
-;; This program is distributed in the hope that it will be useful,
-;; but WITHOUT ANY WARRANTY; without even the implied warranty of
-;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-;; GNU General Public License for more details.
+<span style="font-weight: bold; font-style: italic;">;; </span><span style="font-weight: bold; font-style: italic;">This program is distributed in the hope that it will be useful,</span>
+<span style="font-weight: bold; font-style: italic;">;; </span><span style="font-weight: bold; font-style: italic;">but WITHOUT ANY WARRANTY; without even the implied warranty of</span>
+<span style="font-weight: bold; font-style: italic;">;; </span><span style="font-weight: bold; font-style: italic;">MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span>
+<span style="font-weight: bold; font-style: italic;">;; </span><span style="font-weight: bold; font-style: italic;">GNU General Public License for more details.</span>
 
-;; You should have received a copy of the GNU General Public License
-;; along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.
+<span style="font-weight: bold; font-style: italic;">;; </span><span style="font-weight: bold; font-style: italic;">You should have received a copy of the GNU General Public License</span>
+<span style="font-weight: bold; font-style: italic;">;; </span><span style="font-weight: bold; font-style: italic;">along with this program.  If not, see <a href="http://www.gnu.org/licenses/">&lt;http://www.gnu.org/licenses/&gt;</a>.</span>
 
-;;; Commentary:
+<span style="font-weight: bold; font-style: italic;">;;; </span><span style="font-weight: bold; font-style: italic;">Commentary:</span>
 
-;; Recursively convert a keymap to a deino!
-;; The difference between this and hercules / cosmoem is the latter use which-key.
+<span style="font-weight: bold; font-style: italic;">;; </span><span style="font-weight: bold; font-style: italic;">Recursively convert a keymap to a deino!</span>
+<span style="font-weight: bold; font-style: italic;">;; </span><span style="font-weight: bold; font-style: italic;">The difference between this and hercules / cosmoem is the latter uses which-key.</span>
 
-;;; Code:
+<span style="font-weight: bold; font-style: italic;">;;; </span><span style="font-weight: bold; font-style: italic;">Code:</span>
 
-(require 'meq)
-(require 'which-key)
-(require 'deino)
+(<span style="font-weight: bold;">require</span> '<span style="font-weight: bold; text-decoration: underline;">meq</span>)
+(<span style="font-weight: bold;">require</span> '<span style="font-weight: bold; text-decoration: underline;">which-key</span>)
+(<span style="font-weight: bold;">require</span> '<span style="font-weight: bold; text-decoration: underline;">deino</span>)
 
-(defun meta--replace-spaces (str) (s-replace " " "/" str))
-(defun meta--construct-name (str) (meta--replace-spaces (concat "hydreigon/" str)))
+(<span style="font-weight: bold;">defun</span> <span style="font-weight: bold;">meta--replace-spaces</span> (str) (s-replace <span style="font-style: italic;">" "</span> <span style="font-style: italic;">"/"</span> str))
+(<span style="font-weight: bold;">defun</span> <span style="font-weight: bold;">meta--construct-name</span> (str) (meta--replace-spaces (concat <span style="font-style: italic;">"hydreigon/"</span> str)))
 
-(defmacro meta* (parent first-call name key func*)
-    (let* ((func (intern func*))
+(<span style="font-weight: bold;">defmacro</span> <span style="font-weight: bold;">meta*</span> (parent first-call name key func*)
+    (<span style="font-weight: bold;">let*</span> ((func (intern func*))
             (ds (deino--create-dataset
                 name
                 key
                 parent
                 func
-                #'(lambda
-                    (str)
-                    (interactive)
-                    (meta--construct-name (concat name "/" str)))))
+                #'(<span style="font-weight: bold;">lambda</span> (str) (meta--construct-name (concat name <span style="font-style: italic;">"/"</span> str)))))
 
-            (next-key (string-join (cdr (d--g ds :keys)) " "))
-            (next-deino-body (if (d--g ds :two-key) func (meq/inconcat (d--g ds :next-name) "/body")))
-            (deino-funk (meq/inconcat "defdeino" (if (d--g ds :current-body-plus) "+" "")))
-            (deino-list (if (d--g ds :current-body-plus) (list nil) '((:color blue) nil ("`" nil "cancel")))))
-        (when first-call (eval `(defdeino+
-                                    ,(intern (meta--construct-name name))
-                                    nil
-                                    (,(d--g ds :carkeys)
-                                        ,(d--g ds :current-body)
-                                        ,(symbol-name (d--g ds :current-body))))))
-        (unless (d--g ds :one-key)
-            (eval `(meta* ,(d--g ds :current-parent) nil ,name ,next-key ,func*))
-            `(,(meq/inconcat "defdeino" (if (d--g ds :current-body-plus) "+" ""))
-                ,(intern (d--g ds :current-name))
-                ,@(if (d--g ds :current-body-plus) (list nil) '((:color blue) nil ("`" nil "cancel")))
-                (,(d--g ds :spare-keys)
+            (next-key (string-join (cdr (d--g ds <span style="font-weight: bold;">:keys</span>)) <span style="font-style: italic;">" "</span>))
+            (next-deino-body (<span style="font-weight: bold;">if</span> (d--g ds <span style="font-weight: bold;">:two-key</span>) func (meq/inconcat (d--g ds <span style="font-weight: bold;">:next-name</span>) <span style="font-style: italic;">"/body"</span>)))
+            (deino-funk (meq/inconcat <span style="font-style: italic;">"defdeino"</span> (<span style="font-weight: bold;">if</span> (d--g ds <span style="font-weight: bold;">:current-body-plus</span>) <span style="font-style: italic;">"+"</span> <span style="font-style: italic;">""</span>))))
+        (<span style="font-weight: bold;">when</span> first-call
+            (<span style="font-weight: bold;">unless</span> (fboundp (meq/inconcat (meta--construct-name name) <span style="font-style: italic;">"/body"</span>))
+                (eval `(defdeino ,(intern (meta--construct-name name)) (<span style="font-weight: bold;">:color</span> blue) nil (<span style="font-style: italic;">"`"</span> nil <span style="font-style: italic;">"cancel"</span>))))
+            (eval `(defdeino+
+                    ,(intern (meta--construct-name name))
+                    nil
+                    (,(d--g ds <span style="font-weight: bold;">:carkeys</span>)
+                        ,(d--g ds <span style="font-weight: bold;">:current-body</span>)
+                        ,(symbol-name (d--g ds <span style="font-weight: bold;">:current-body</span>))))))
+        (<span style="font-weight: bold;">unless</span> (d--g ds <span style="font-weight: bold;">:one-key</span>)
+            (eval `(meta* ,(d--g ds <span style="font-weight: bold;">:current-parent</span>) nil ,name ,next-key ,func*))
+            `(,(meq/inconcat <span style="font-style: italic;">"defdeino"</span> (<span style="font-weight: bold;">if</span> (d--g ds <span style="font-weight: bold;">:current-body-plus</span>) <span style="font-style: italic;">"+"</span> <span style="font-style: italic;">""</span>))
+                ,(intern (d--g ds <span style="font-weight: bold;">:current-name</span>))
+                ,@(<span style="font-weight: bold;">if</span> (d--g ds <span style="font-weight: bold;">:current-body-plus</span>)
+                    (list nil)
+                    `((<span style="font-weight: bold;">:color</span> blue) nil
+                        (<span style="font-style: italic;">"`"</span> nil <span style="font-style: italic;">"cancel"</span>)
+                        (<span style="font-style: italic;">"DEL"</span> ,(<span style="font-weight: bold;">if</span> first-call nil (meq/inconcat (meta--construct-name (d--g ds <span style="font-weight: bold;">:current-parent</span>)) <span style="font-style: italic;">"/body"</span>)) <span style="font-style: italic;">"back"</span>)))
+                (,(d--g ds <span style="font-weight: bold;">:spare-keys</span>)
                     ,next-deino-body
                     ,(symbol-name next-deino-body))))))
 
-;;;###autoload
-(defmacro meta (keymap)
-    (let* ((name* (symbol-name keymap))
+<span style="font-weight: bold; font-style: italic;">;;;</span><span style="font-weight: bold; font-style: italic;">###</span><span style="font-weight: bold; font-style: italic;">autoload</span>
+(<span style="font-weight: bold;">defmacro</span> <span style="font-weight: bold;">meta</span> (keymap)
+    (<span style="font-weight: bold;">let*</span> ((name* (symbol-name keymap))
             (name (meta--construct-name name*)))
-        (eval `(defdeino ,(intern name) (:color blue) nil ("`" nil "cancel")))
-        (mapc #'(lambda (kons) (interactive)
+        (mapc #'(<span style="font-weight: bold;">lambda</span> (kons)
                     (eval `(meta*
                         nil
                         t
                         ,name*
                         ,(car kons)
                         ,(cdr kons))))
-            (eval `(which-key--get-keymap-bindings ,keymap nil nil t))) nil))
+            (eval `(which-key--get-keymap-bindings ,keymap nil nil nil t))) <span style="font-weight: bold;">nil))</span>
 
-;;;###autoload
-(defmacro meta-evil (keymap)
-    (let* ((name* (symbol-name keymap))
+<span style="font-weight: bold; font-style: italic;">;;;</span><span style="font-weight: bold; font-style: italic;">###</span><span style="font-weight: bold; font-style: italic;">autoload</span>
+(<span style="font-weight: bold;">defmacro</span> <span style="font-weight: bold;">meta-evil</span> (keymap)
+    (<span style="font-weight: bold;">with-eval-after-load</span> 'evil (<span style="font-weight: bold;">let*</span> ((name* (symbol-name keymap))
             (name (meta--construct-name name*)))
-        (eval `(defdeino ,(intern name) (:color blue) nil ("`" nil "cancel")))
-        (mapc #'(lambda (kons) (interactive)
+        (mapc #'(<span style="font-weight: bold;">lambda</span> (kons)
                     (eval `(meta*
                         nil
                         t
                         ,name*
                         ,(car kons)
                         ,(cdr kons))))
-            (eval `(which-key--get-keymap-bindings ,keymap nil nil t t))) nil))
+            (eval `(which-key--get-keymap-bindings ,keymap nil nil nil t t))) <span style="font-weight: bold;">nil)))</span>
 
-;;;###autoload
-(defmacro meta-aiern (keymap)
-    (let* ((name* (symbol-name keymap))
+<span style="font-weight: bold; font-style: italic;">;;;</span><span style="font-weight: bold; font-style: italic;">###</span><span style="font-weight: bold; font-style: italic;">autoload</span>
+(<span style="font-weight: bold;">defmacro</span> <span style="font-weight: bold;">meta-aiern</span> (keymap)
+    (<span style="font-weight: bold;">with-eval-after-load</span> 'aiern (<span style="font-weight: bold;">let*</span> ((name* (symbol-name keymap))
             (name (meta--construct-name name*)))
-        (eval `(defdeino ,(intern name) (:color blue) nil ("`" nil "cancel")))
-        (mapc #'(lambda (kons) (interactive)
+        (mapc #'(<span style="font-weight: bold;">lambda</span> (kons)
                     (eval `(meta*
                         nil
                         t
                         ,name*
                         ,(car kons)
                         ,(cdr kons))))
-            (eval `(which-key--get-keymap-bindings ,keymap nil nil t nil t))) nil))
+            (eval `(which-key--get-keymap-bindings ,keymap nil nil nil t nil t))) <span style="font-weight: bold;">nil)))</span>
 
-;;;###autoload
-(defmacro meta-rename (keymap key &amp;rest args)
-    (let* ((name (symbol-name keymap)))
+<span style="font-weight: bold; font-style: italic;">;;;</span><span style="font-weight: bold; font-style: italic;">###</span><span style="font-weight: bold; font-style: italic;">autoload</span>
+(<span style="font-weight: bold;">defmacro</span> <span style="font-weight: bold;">meta-rename</span> (keymap key <span style="font-weight: bold; text-decoration: underline;">&amp;rest</span> args)
+    (<span style="font-weight: bold;">let*</span> ((name (symbol-name keymap)))
         `(defdeino+
             ,(intern (meta--construct-name name))
             nil
-            (,key
-                ,(meq/inconcat (meta--construct-name (concat name "/" key)) "/body")
-                ,@args))))
+            (,key ,(meq/inconcat (meta--construct-name (concat name <span style="font-style: italic;">"/"</span> key)) <span style="font-style: italic;">"/body"</span>) ,@args))))
 
-;;;###autoload
-(defmacro meta-rename+ (keymap key &amp;rest args)
-    (let* ((second-constructor `(lambda (str) (interactive)
-                                    (meta--construct-name (concat ,(symbol-name keymap) "/" str))))
-            (first-constructor `(lambda (keys) (interactive)
+<span style="font-weight: bold; font-style: italic;">;;;</span><span style="font-weight: bold; font-style: italic;">###</span><span style="font-weight: bold; font-style: italic;">autoload</span>
+(<span style="font-weight: bold;">defmacro</span> <span style="font-weight: bold;">meta-rename+</span> (keymap key <span style="font-weight: bold; text-decoration: underline;">&amp;rest</span> args)
+    (<span style="font-weight: bold;">let*</span> ((second-constructor `(<span style="font-weight: bold;">lambda</span> (str) (<span style="font-weight: bold;">interactive</span>)
+                                    (meta--construct-name (concat ,(symbol-name keymap) <span style="font-style: italic;">"/"</span> str))))
+            (first-constructor `(<span style="font-weight: bold;">lambda</span> (keys) (<span style="font-weight: bold;">interactive</span>)
                                     (deino--construct-name+ keys #',second-constructor))))
         `(deino--nested-rename key #',first-constructor args)))
 
-(with-eval-after-load 'use-package
-    ;; Primarily adapted from https://gitlab.com/to1ne/use-package-hydra/-/blob/master/use-package-hydra.el
+(<span style="font-weight: bold;">with-eval-after-load</span> 'use-package
+    <span style="font-weight: bold; font-style: italic;">;; </span><span style="font-weight: bold; font-style: italic;">Primarily adapted from https://gitlab.com/to1ne/use-package-hydra/-/blob/master/use-package-hydra.el</span>
 
-    ;; Adapted From: https://github.com/jwiegley/use-package/blob/master/use-package-core.el#L1153
-    ;;;###autoload
-    (defalias 'use-package-normalize/:meta 'use-package-normalize-forms)
+    <span style="font-weight: bold; font-style: italic;">;; </span><span style="font-weight: bold; font-style: italic;">Adapted From: https://github.com/jwiegley/use-package/blob/master/use-package-core.el#L1153</span>
+    <span style="font-weight: bold; font-style: italic;">;;;</span><span style="font-weight: bold; font-style: italic;">###autoload</span>
+    (<span style="font-weight: bold;">defalias</span> '<span style="font-weight: bold;">use-package-normalize/:meta</span> 'use-package-normalize-forms)
 
-    ;; Adapted From: https://gitlab.com/to1ne/use-package-hydra/-/blob/master/use-package-hydra.el#L79
-    ;;;###autoload
-    (defun use-package-handler/:meta (name keyword args rest state)
-        (use-package-concat (mapcar #'(lambda (def) `(meta ,@def)) args)
+    <span style="font-weight: bold; font-style: italic;">;; </span><span style="font-weight: bold; font-style: italic;">Adapted From: https://gitlab.com/to1ne/use-package-hydra/-/blob/master/use-package-hydra.el#L79</span>
+    <span style="font-weight: bold; font-style: italic;">;;;</span><span style="font-weight: bold; font-style: italic;">###autoload</span>
+    (<span style="font-weight: bold;">defun</span> <span style="font-weight: bold;">use-package-handler/:meta</span> (name keyword args rest state)
+        (use-package-concat (mapcar #'(<span style="font-weight: bold;">lambda</span> (def) `(meta ,@def)) args)
         (use-package-process-keywords name rest state)))
 
-    (add-to-list 'use-package-keywords :meta t)
+    (add-to-list 'use-package-keywords <span style="font-weight: bold;">:meta</span> t)
 
-    ;;;###autoload
-    (defalias 'use-package-normalize/:meta-evil 'use-package-normalize-forms)
+    <span style="font-weight: bold; font-style: italic;">;;;</span><span style="font-weight: bold; font-style: italic;">###autoload</span>
+    (<span style="font-weight: bold;">defalias</span> '<span style="font-weight: bold;">use-package-normalize/:meta-evil</span> 'use-package-normalize-forms)
 
-    ;;;###autoload
-    (defun use-package-handler/:meta-evil (name keyword args rest state)
-        (use-package-concat (mapcar #'(lambda (def) `(meta-evil ,@def)) args)
+    <span style="font-weight: bold; font-style: italic;">;;;</span><span style="font-weight: bold; font-style: italic;">###autoload</span>
+    (<span style="font-weight: bold;">defun</span> <span style="font-weight: bold;">use-package-handler/:meta-evil</span> (name keyword args rest state)
+        (use-package-concat (mapcar #'(<span style="font-weight: bold;">lambda</span> (def) `(meta-evil ,@def)) args)
         (use-package-process-keywords name rest state)))
 
-    (add-to-list 'use-package-keywords :meta-evil t)
+    (add-to-list 'use-package-keywords <span style="font-weight: bold;">:meta-evil</span> t)
 
-    ;;;###autoload
-    (defalias 'use-package-normalize/:meta-aiern 'use-package-normalize-forms)
+    <span style="font-weight: bold; font-style: italic;">;;;</span><span style="font-weight: bold; font-style: italic;">###autoload</span>
+    (<span style="font-weight: bold;">defalias</span> '<span style="font-weight: bold;">use-package-normalize/:meta-aiern</span> 'use-package-normalize-forms)
 
-    ;;;###autoload
-    (defun use-package-handler/:meta-aiern (name keyword args rest state)
-        (use-package-concat (mapcar #'(lambda (def) `(meta-aiern ,@def)) args)
+    <span style="font-weight: bold; font-style: italic;">;;;</span><span style="font-weight: bold; font-style: italic;">###autoload</span>
+    (<span style="font-weight: bold;">defun</span> <span style="font-weight: bold;">use-package-handler/:meta-aiern</span> (name keyword args rest state)
+        (use-package-concat (mapcar #'(<span style="font-weight: bold;">lambda</span> (def) `(meta-aiern ,@def)) args)
         (use-package-process-keywords name rest state)))
 
-    (add-to-list 'use-package-keywords :meta-aiern t)
+    (add-to-list 'use-package-keywords <span style="font-weight: bold;">:meta-aiern</span> t)
 
-    ;;;###autoload
-    (defalias 'use-package-normalize/:meta-rename 'use-package-normalize-forms)
+    <span style="font-weight: bold; font-style: italic;">;;;</span><span style="font-weight: bold; font-style: italic;">###autoload</span>
+    (<span style="font-weight: bold;">defalias</span> '<span style="font-weight: bold;">use-package-normalize/:meta-rename</span> 'use-package-normalize-forms)
 
-    ;;;###autoload
-    (defun use-package-handler/:meta-rename (name keyword args rest state)
-    "Generate meta-rename with NAME for `:meta-rename' KEYWORD.
-    ARGS, REST, and STATE are prepared by `use-package-normalize/:meta-rename'."
+    <span style="font-weight: bold; font-style: italic;">;;;</span><span style="font-weight: bold; font-style: italic;">###autoload</span>
+    (<span style="font-weight: bold;">defun</span> <span style="font-weight: bold;">use-package-handler/:meta-rename</span> (name keyword args rest state)
+    <span style="font-style: italic;">"Generate meta-rename with NAME for `</span><span style="font-weight: bold; font-style: italic; text-decoration: underline;">:meta-rename</span><span style="font-style: italic;">' KEYWORD.</span>
+<span style="font-style: italic;">    ARGS, REST, and STATE are prepared by `</span><span style="font-weight: bold; font-style: italic; text-decoration: underline;">use-package-normalize/:meta-rename</span><span style="font-style: italic;">'."</span>
     (use-package-concat
-    (mapcar #'(lambda (def) `(meta-rename ,@def)) args)
+    (mapcar #'(<span style="font-weight: bold;">lambda</span> (def) `(meta-rename ,@def)) args)
     (use-package-process-keywords name rest state)))
 
-    (add-to-list 'use-package-keywords :meta-rename t)
+    (add-to-list 'use-package-keywords <span style="font-weight: bold;">:meta-rename</span> t)
 
-    ;;;###autoload
-    (defalias 'use-package-normalize/:meta-rename+ 'use-package-normalize-forms)
+    <span style="font-weight: bold; font-style: italic;">;;;</span><span style="font-weight: bold; font-style: italic;">###autoload</span>
+    (<span style="font-weight: bold;">defalias</span> '<span style="font-weight: bold;">use-package-normalize/:meta-rename+</span> 'use-package-normalize-forms)
 
-    ;;;###autoload
-    (defun use-package-handler/:meta-rename+ (name keyword args rest state)
-    "Generate meta-rename+ with NAME for `:meta-rename+' KEYWORD.
-    ARGS, REST, and STATE are prepared by `use-package-normalize/:meta-rename+'."
+    <span style="font-weight: bold; font-style: italic;">;;;</span><span style="font-weight: bold; font-style: italic;">###autoload</span>
+    (<span style="font-weight: bold;">defun</span> <span style="font-weight: bold;">use-package-handler/:meta-rename+</span> (name keyword args rest state)
+    <span style="font-style: italic;">"Generate meta-rename+ with NAME for `</span><span style="font-weight: bold; font-style: italic; text-decoration: underline;">:meta-rename+</span><span style="font-style: italic;">' KEYWORD.</span>
+<span style="font-style: italic;">    ARGS, REST, and STATE are prepared by `</span><span style="font-weight: bold; font-style: italic; text-decoration: underline;">use-package-normalize/:meta-rename+</span><span style="font-style: italic;">'."</span>
     (use-package-concat
-    (mapcar #'(lambda (def) `(meta-rename+ ,@def)) args)
+    (mapcar #'(<span style="font-weight: bold;">lambda</span> (def) `(meta-rename+ ,@def)) args)
     (use-package-process-keywords name rest state)))
 
-    (add-to-list 'use-package-keywords :meta-rename+ t))
+    (add-to-list 'use-package-keywords <span style="font-weight: bold;">:meta-rename+</span> t))
 
-(provide 'meta)
-;;; meta.el ends here
+(<span style="font-weight: bold;">provide</span> '<span style="font-weight: bold; text-decoration: underline;">meta</span>)
+<span style="font-weight: bold; font-style: italic;">;;; </span><span style="font-weight: bold; font-style: italic;">meta.el ends here</span>
 </code></pre>
 </div>
 </div>
@@ -258,7 +234,7 @@
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Jeet Ray</p>
-<p class="date">Created: 2022-11-14 Mon 06:03</p>
+<p class="date">Created: 2023-09-04 Mon 12:28</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
