@@ -32,7 +32,7 @@
   description = "Recursively convert a keymap to a deino!";
   inputs = rec {
     bundle = {
-      url = "git+https://github.com/sylvorg/bundle.git";
+      url = "https://github.com/sylvorg/bundle.git";
       type = "git";
       submodules = true;
     };
